@@ -13,7 +13,7 @@ class BoxLayoutExample(BoxLayout):
     #     b2 = Button(text="Button2")
     #     b3 = Button(text="Button3")
 
-    #     self.add_widget(b1)
+    #     self.add_widget(b1)    
     #     self.add_widget(b2)
     #     self.add_widget(b3)
 
