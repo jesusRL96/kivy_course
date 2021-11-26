@@ -7,19 +7,23 @@ BoxLayoutExample:
         text: "ButtonA"
         #size: "40dp", "80dp" 
         # size_hint: .25, None # None allows to use size prop
-        size_hint: None, .25 # None allows to use size prop
-        # size: "80dp", "80dp"
-        # width: "80dp"
+        size_hint: .5, .25
         height: "100dp"
-        # pos_hint: {"x":.5} # x, center_x, right | y, center_y, top
-        # pos_hint: {"right":.5} 
-        # pos_hint: {"center_x":.50} 
         pos_hint: {"top":.5}
         pos_hint: {"center_y":.5}
         pos_hint: {"y":.5}
-    Button:
-        text: "ButtonB"
-        # size_hint: 1, 2
+
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "5dp"
+        Button:
+            text: "ButtonB1"
+        Button:
+            text: "ButtonB2"
+        Button:
+            text: "ButtonB3"
+        Button:
+            text: "ButtonB4"
     Button:
         text: "ButtonC"
 
