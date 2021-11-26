@@ -1,4 +1,25 @@
-AnchorLayoutExample:
+GridLayoutExample:
+
+<GridLayoutExample@GridLayout>:
+    # rows: 2
+    cols: 3
+    Button:
+        text: "ButtonA"
+        # size_hint: .5, 1
+        size_hint: None, 1
+        width: "80dp"
+    BoxLayoutExample:
+    Button:
+        text: "ButtonC"
+    Button:
+        text: "ButtonD"
+        # size_hint: .5, 1
+        size_hint: None, 1
+        width: "80dp"
+    Button:
+        text: "ButtonE"
+    Button:
+        text: "ButtonF"
 
 
 <AnchorLayoutExample>:
@@ -8,7 +29,7 @@ AnchorLayoutExample:
     anchor_y: "top"
     BoxLayout:
         orientation: "horizontal"
-        size_hint: .2, .2
+        size_hint: .2, .5
         Button:
             text: "ButtonA"
         Button:
