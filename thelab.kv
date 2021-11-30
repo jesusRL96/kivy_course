@@ -19,6 +19,11 @@ WidgetExamples:
         color: 1,1,0,1
         text: root.my_text
     
+    Switch:
+        size_hint: None, 1
+        width: "100dp"
+        on_active: root.on_switch_active(self)
+    
 
 
 <PageLayoutExample@PageLayout>:

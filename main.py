@@ -31,6 +31,10 @@ class WidgetExamples(GridLayout):
             # ON
             toggle_button.text = "ON"
             self.count_enable = True
+    
+    def on_switch_active(self, widget):
+        print('active state: ', widget.active)
+        
 
 
 class StackLayoutExample(StackLayout):
