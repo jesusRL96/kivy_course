@@ -23,6 +23,13 @@ WidgetExamples:
         size_hint: None, 1
         width: "100dp"
         on_active: root.on_switch_active(self)
+
+    Slider:
+        min: 0
+        max: 100
+        value: 50
+        orientation: "vertical"
+        on_value: root.on_slider_value(self)
     
 
 
