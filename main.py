@@ -1,11 +1,22 @@
 from kivy.app import App
 from kivy.metrics import dp
+
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.anchorlayout import AnchorLayout 
 from kivy.uix.gridlayout import GridLayout 
 from kivy.uix.stacklayout import StackLayout 
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button
+
+from kivy.properties import StringProperty
+
+
+class WidgetExamples(GridLayout):
+    my_text = StringProperty("Hello!")
+    def on_button_click(self):
+        print('button clicked')
+        self.my_text = "You clicked"
+
 
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):
