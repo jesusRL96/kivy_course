@@ -11,7 +11,7 @@ class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         # self.orientation = "lr-bt"
-        for i in range(10):
+        for i in range(100):
             # size = dp(100 + i*10)
             size = dp(100)
             b =  Button(text=f"Button {i+1}", size_hint=(None,None), size=(size, size))
