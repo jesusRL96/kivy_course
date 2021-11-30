@@ -11,6 +11,8 @@ WidgetExamples:
     Button:
         text: "Count"
         on_press: root.on_button_click()
+        disabled: not root.count_enable
+
     Label:
         font_name: "RESOURCES/fonts/Lcd.ttf"
         font_size: "80dp"

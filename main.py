@@ -8,12 +8,12 @@ from kivy.uix.stacklayout import StackLayout
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button
 
-from kivy.properties import StringProperty
+from kivy.properties import StringProperty, BooleanProperty
 
 
 class WidgetExamples(GridLayout):
     count = 1
-    count_enable = False
+    count_enable = BooleanProperty(False)
     my_text = StringProperty(f"Count: {count}")
     def on_button_click(self):
         print('button clicked')
