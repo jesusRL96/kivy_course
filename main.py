@@ -12,10 +12,12 @@ from kivy.properties import StringProperty
 
 
 class WidgetExamples(GridLayout):
-    my_text = StringProperty("Hello!")
+    count = 1
+    my_text = StringProperty(f"Count: {count}")
     def on_button_click(self):
         print('button clicked')
-        self.my_text = "You clicked"
+        self.count += 1
+        self.my_text = f"Count: {self.count}"
 
 
 class StackLayoutExample(StackLayout):
