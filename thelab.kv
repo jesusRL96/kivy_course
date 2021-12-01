@@ -35,8 +35,14 @@ WidgetExamples:
         on_value: root.on_slider_value(self)
         disabled: not my_switch.active
 
-    Label:
-        text: "Value: {0:.2f}".format(my_slider.value)
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Value: {0:.2f}".format(my_slider.value)
+
+        ProgressBar:
+            max: 100
+            value: my_slider.value
     
 
 
