@@ -20,9 +20,11 @@ WidgetExamples:
         text: root.my_text
     
     Switch:
+        id: my_switch
         size_hint: None, 1
         width: "100dp"
         on_active: root.on_switch_active(self)
+        active: True
 
     Slider:
         id: my_slider
@@ -31,6 +33,7 @@ WidgetExamples:
         value: 50
         orientation: "vertical"
         on_value: root.on_slider_value(self)
+        disabled: not my_switch.active
 
     Label:
         text: "Value: {0:.2f}".format(my_slider.value)
