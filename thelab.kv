@@ -25,11 +25,15 @@ WidgetExamples:
         on_active: root.on_switch_active(self)
 
     Slider:
+        id: my_slider
         min: 0
         max: 100
         value: 50
         orientation: "vertical"
         on_value: root.on_slider_value(self)
+
+    Label:
+        text: "Value: {0:.2f}".format(my_slider.value)
     
 
 
