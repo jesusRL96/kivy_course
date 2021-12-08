@@ -10,6 +10,9 @@ from kivy.uix.button import Button
 
 from kivy.properties import StringProperty, BooleanProperty
 
+class CanvasExample3(Widget):
+    pass
+
 class CanvasExample2(Widget):
     pass
 
