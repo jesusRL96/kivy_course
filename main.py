@@ -13,6 +13,7 @@ from kivy.graphics.vertex_instructions import Line, Rectangle
 from kivy.graphics.context_instructions import Color
 
 class CanvasExample4(Widget):
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         with self.canvas:
@@ -20,11 +21,17 @@ class CanvasExample4(Widget):
             Color(0,1,0)
             Line(circle=(400,200,80), width=2)
             Line(rectangle=(600,400,150,100), width=3)
-            self.rect = Rectangle(pos=(600,100), size=(100, 200))
+            self.rect = Rectangle(pos=(100,100), size=(100, 200))
 
     def on_button_a_click(self, widget):
         x,y = self.rect.pos
-        self.rect.pos = (x-5,y+5)
+        w,h = self.rect.size
+        diff_x = self.width - (x + w)
+        diff_y = self.height - (y + h)
+        step=30
+        x = x+step if diff_x > step else x+diff_x
+        y = y+step if diff_y > step else y+diff_y
+        self.rect.pos = (x,y)
 
 class CanvasExample3(Widget):
     pass
