@@ -10,6 +10,9 @@ from kivy.uix.button import Button
 
 from kivy.properties import StringProperty, BooleanProperty
 
+class CanvasExample1(Widget):
+    pass
+
 
 class WidgetExamples(GridLayout):
     count = 1
