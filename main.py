@@ -20,7 +20,11 @@ class CanvasExample4(Widget):
             Color(0,1,0)
             Line(circle=(400,200,80), width=2)
             Line(rectangle=(600,400,150,100), width=3)
-            Rectangle(pos=(600,100), size=(100, 200))
+            self.rect = Rectangle(pos=(600,100), size=(100, 200))
+
+    def on_button_a_click(self, widget):
+        x,y = self.rect.pos
+        self.rect.pos = (x-5,y+5)
 
 class CanvasExample3(Widget):
     pass
