@@ -8,9 +8,29 @@ from kivy.uix.stacklayout import StackLayout
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button
 
-from kivy.properties import StringProperty, BooleanProperty
-from kivy.graphics.vertex_instructions import Line, Rectangle
+from kivy.properties import StringProperty, BooleanProperty, Clock
+from kivy.graphics.vertex_instructions import Line, Rectangle, Ellipse
 from kivy.graphics.context_instructions import Color
+
+class CanvasExample5(Widget):
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.size_ball = dp(50)
+        with self.canvas:
+            self.ball = Ellipse(pos=self.center, size=(self.size_ball,self.size_ball))
+        Clock.schedule_interval(self.update, 1/60)
+
+
+    def on_size(self, *args):
+        self.ball.pos = (self.center_x - self.size_ball/2, self.center_y - self.size_ball/2)
+    
+    def update(self, dt):
+        # print(dt)
+        step = dp(4)
+        x,y = self.ball.pos
+        self.ball.pos = (x+step, y)
+
 
 class CanvasExample4(Widget):
 
