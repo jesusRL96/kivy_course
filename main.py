@@ -12,6 +12,9 @@ from kivy.properties import StringProperty, BooleanProperty, Clock
 from kivy.graphics.vertex_instructions import Line, Rectangle, Ellipse
 from kivy.graphics.context_instructions import Color
 
+class CanvasExample7(BoxLayout):
+    pass
+
 class CanvasExample6(Widget):
     pass
 
